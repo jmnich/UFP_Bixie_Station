@@ -1,0 +1,65 @@
+This file contains basic information on formatting the messages used by Pendulum and Bixie Station
+
+| - visual separator, not present in the actual message
+
+
+
+STATION -> PENDULUM
+
+"arm_motors"            launch and synchronize rotors - then maintain minimal power required for synchronization
+
+"disarm_motors"         turns motors off
+
+"start_telemetry"       starts sending telemetry every 10 ms
+
+"stop_telemetry"        stops sending telemetry
+
+"lock_on_angle"         stop all actions and maintain given angle (use PID for this)
+|
+<angle>
+
+"launch_experiment"     immediately launches experiment stopped by locking on angle or disarming
+|
+<regulator_name>
+|
+<target_angle>
+
+
+
+PENDULUM -> STATION
+
+"telemetry_package"
+|
+<nano_time>
+|
+<current_angle_filtered>
+|
+<current_angular_velocity>
+|
+<angle_error>
+|
+<accX>
+|
+<accY>
+|
+<accZ>
+|
+<gyroX>
+|
+<gyroY>
+|
+<gyroZ>
+|
+<magX>
+|
+<magY>
+|
+<magZ>
+|
+<left_motor_rps>                equals 0 if information is not available
+|
+<right_motor_rps>               equals 0 if information is not available
+|
+<left_motor_current>            equals 0 if information is not available
+|
+<right_motor_current>           equals 0 if information is not available
